@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap");
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --pc-red: hsl(1, 90%, 64%);
+  --pc-blue: hsl(219, 85%, 26%);
+
+  --nc-white: hsl(0, 0%, 100%);
+  --nc-very-light-grayish: hsl(210, 60%, 98%);
+  --nc-light-grayish-blue-1: hsl(211, 68%, 94%);
+  --nc-light-grayish-blue-2: hsl(205, 33%, 90%);
+  --nc-grayish-blue: hsl(219, 14%, 63%);
+  --nc-dark-grayish-blue: hsl(219, 12%, 42%);
+  --nc-very-dark-blue: hsl(224, 21%, 14%);
+
+  --ff-jakarta: "Plus Jakarta Sans", sans-serif;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  font-family: var(--ff-jakarta);
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  background-color: var(--nc-very-light-grayish);
+}
+h2 {
+  color: var(--pc-marine-blue);
+}
+ul {
+  list-style-type: none;
+}
+img {
+  max-width: 100%;
+}
+button {
+  background-color: unset;
+  outline: none;
+  border: none;
+  font-family: inherit;
+  color: inherit;
+}
+input,
+label {
+  display: block;
+  width: 100%;
+  font-family: inherit;
+}
+
+/* =========================================================== */
+
+/* MAIN */
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: var(--nc-white);
+  padding: 2rem 1.2rem;
+  height: 100%;
+}
+
+@media screen and (min-width: 720px) {
+  body {
+    padding: 2rem 1.2rem;
+  }
+  .main {
+    height: unset;
+  }
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  white-space: nowrap;
+  margin-bottom: 2rem;
+}
+.header h1 {
+  font-size: 2rem;
+}
+.mark-all-read {
+  color: var(--nc-dark-grayish-blue);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.mark-all-read:hover {
+  font-weight: bold;
+  color: var(--pc-red);
+}
+
+.number-of-notifications {
+  background-color: var(--pc-blue);
+  color: var(--nc-white);
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+/* NOTIFICATION */
+.notification {
+  display: flex;
+  background-color: var(--nc-light-grayish-blue-1);
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.no-read {
+  cursor: pointer;
+}
+
+.notification p,
+.notification img,
+.notification div {
+  pointer-events: none;
+}
+
+.notification-title {
+  color: var(--nc-dark-grayish-blue);
+}
+
+.notification-img {
+  height: 48px;
+  width: 48px;
+}
+
+.notification-user {
+  font-weight: bold;
+}
+
+.notification-body {
+  color: var(--nc-dark-grayish-blue);
+  display: inline-block;
+  margin-top: 1rem;
+  border: 1px solid var(--nc-grayish-blue);
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.notification-chess-club {
+  color: var(--pc-blue);
+  font-weight: bold;
+}
+
+.notification-time {
+  display: block;
+  color: var(--nc-grayish-blue);
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.notification-dot {
+  background-color: var(--pc-red);
+  margin-left: 0.4rem;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
